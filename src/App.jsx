@@ -146,30 +146,32 @@ function App() {
 
         <NewRequestForm onCreated={fetchRequests} notify={notify} />
 
-{/* SEARCH */}
-<div className="mt-8 flex flex-col gap-3 md:flex-row md:gap-4">
+<div className="mt-8 flex flex-col sm:flex-row gap-4">
+  {/* SEARCH */}
   <input
     type="text"
     placeholder="Search by email, category, or description..."
     value={query}
     onChange={(e) => setQuery(e.target.value)}
     className="
-  w-full p-2 rounded-md
-  bg-blue-900/40 text-white
-  placeholder-gray-300
-  border border-blue-400/30
-  focus:outline-none focus:ring-2 focus:ring-blue-500"
+      flex-1 p-3 rounded-md
+      bg-slate-800 text-white
+      border border-white/20
+      placeholder-gray-400
+      focus:outline-none focus:ring-2 focus:ring-blue-500
+    "
   />
 
+  {/* CATEGORY FILTER */}
   <select
     value={categoryFilter}
     onChange={(e) => setCategoryFilter(e.target.value)}
     className="
-  w-full md:w-auto p-2 rounded-md
-  bg-blue-900/40 text-white
-  border border-blue-400/30
-  focus:outline-none focus:ring-2 focus:ring-blue-500"
-
+      p-3 rounded-md
+      bg-slate-800 text-white
+      border border-white/20
+      focus:outline-none focus:ring-2 focus:ring-blue-500
+    "
   >
     <option value="all">All Categories</option>
     <option value="general advising">General Advising</option>
