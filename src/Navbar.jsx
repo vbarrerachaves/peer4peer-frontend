@@ -1,3 +1,4 @@
+import peer4peerLogo from "./assets/peer4peer-logo.png";
 import { useEffect, useState } from "react";
 import { enableDarkMode, disableDarkMode } from "./theme";
 
@@ -33,9 +34,14 @@ export default function Navbar() {
 
   return (
     <div className="w-full flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-800 shadow">
-      <div className="text-2xl font-bold text-blue-600 dark:text-blue-300">
-        Peer4Peer
-      </div>
+      <div className="flex items-center gap-3">
+  <img
+    src={peer4peerLogo}
+    alt="Peer4Peer"
+    className="h-8 md:h-9 w-auto drop-shadow"
+  />
+</div>
+
 
       <button
         onClick={toggleDark}
