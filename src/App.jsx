@@ -145,28 +145,28 @@ function App() {
         </div>
 
         <NewRequestForm onCreated={fetchRequests} notify={notify} />
+{/* SEARCH */}
+<div className="mt-8 flex flex-col gap-3 md:flex-row md:gap-4">
+  <input
+    type="text"
+    placeholder="Search by email, category, or description..."
+    value={query}
+    onChange={(e) => setQuery(e.target.value)}
+    className="w-full p-2 rounded-md bg-white text-black"
+  />
 
-        {/* SEARCH */}
-        <div className="mt-8 flex gap-4">
-          <input
-            type="text"
-            placeholder="Search..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className="flex-1 p-2 rounded-md bg-white text-black"
-          />
+  <select
+    value={categoryFilter}
+    onChange={(e) => setCategoryFilter(e.target.value)}
+    className="w-full md:w-auto p-2 rounded-md bg-white text-black"
+  >
+    <option value="all">All Categories</option>
+    <option value="general advising">General Advising</option>
+    <option value="class registration">Class Registration</option>
+    <option value="financial aid">Financial Aid</option>
+  </select>
+</div>
 
-          <select
-            value={categoryFilter}
-            onChange={(e) => setCategoryFilter(e.target.value)}
-            className="p-2 rounded-md bg-white text-black"
-          >
-            <option value="all">All Categories</option>
-            <option value="general advising">General Advising</option>
-            <option value="class registration">Class Registration</option>
-            <option value="financial aid">Financial Aid</option>
-          </select>
-        </div>
 
         {/* REQUESTS */}
         <div className="space-y-4 mt-8">
