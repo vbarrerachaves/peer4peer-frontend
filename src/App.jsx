@@ -70,32 +70,34 @@ function App() {
       >
         <div className="min-h-screen bg-black/60 text-white">
 
-          {/* NAVBAR */}
-<div className="w-full flex items-center px-6 py-4 bg-black/60 backdrop-blur shadow">
+{/* NAVBAR */}
+<div className="w-full px-6 py-4 bg-black/60 backdrop-blur shadow">
+  <div className="flex flex-col md:flex-row md:items-center">
 
-  {/* LEFT: SFC + Peer4Peer */}
-  <div className="flex items-center gap-3">
-    <img
-      src={sfcLogo}
-      alt="St. Francis College"
-      className="h-8 opacity-80"
-    />
-    <img
-      src={peer4peerLogo}
-      alt="Peer4Peer"
-      className="h-10 drop-shadow"
-    />
+    {/* TOP ROW (mobile) / LEFT (desktop): SFC + Peer4Peer */}
+    <div className="flex items-center gap-3 justify-center md:justify-start">
+      <img
+        src={sfcLogo}
+        alt="St. Francis College"
+        className="h-8 opacity-80"
+      />
+      <img
+        src={peer4peerLogo}
+        alt="Peer4Peer"
+        className="h-10 drop-shadow"
+      />
+    </div>
+
+    {/* NAV LINKS */}
+    <div className="mt-3 md:mt-0 flex-1 flex justify-center gap-6 text-sm font-semibold">
+      <Link to="/" className="hover:underline">Student</Link>
+      <Link to="/advisor" className="hover:underline">Advisor</Link>
+      <Link to="/about" className="hover:underline">About</Link>
+    </div>
+
+    {/* RIGHT: RESERVED (future toggle/settings) */}
+    <div className="hidden md:block w-[120px]" />
   </div>
-
-  {/* CENTER: NAV */}
-  <div className="flex-1 flex justify-center gap-6 text-sm font-semibold">
-    <Link to="/" className="hover:underline">Student</Link>
-    <Link to="/advisor" className="hover:underline">Advisor</Link>
-    <Link to="/about" className="hover:underline">About</Link>
-  </div>
-
-  {/* RIGHT: RESERVED (future toggle/settings) */}
-  <div className="w-[120px]" />
 </div>
 
 
