@@ -145,6 +145,7 @@ function App() {
         </div>
 
         <NewRequestForm onCreated={fetchRequests} notify={notify} />
+
 {/* SEARCH */}
 <div className="mt-8 flex flex-col gap-3 md:flex-row md:gap-4">
   <input
@@ -152,13 +153,23 @@ function App() {
     placeholder="Search by email, category, or description..."
     value={query}
     onChange={(e) => setQuery(e.target.value)}
-    className="w-full p-2 rounded-md bg-white text-black"
+    className="
+  w-full p-2 rounded-md
+  bg-blue-900/40 text-white
+  placeholder-gray-300
+  border border-blue-400/30
+  focus:outline-none focus:ring-2 focus:ring-blue-500"
   />
 
   <select
     value={categoryFilter}
     onChange={(e) => setCategoryFilter(e.target.value)}
-    className="w-full md:w-auto p-2 rounded-md bg-white text-black"
+    className="
+  w-full md:w-auto p-2 rounded-md
+  bg-blue-900/40 text-white
+  border border-blue-400/30
+  focus:outline-none focus:ring-2 focus:ring-blue-500"
+
   >
     <option value="all">All Categories</option>
     <option value="general advising">General Advising</option>
