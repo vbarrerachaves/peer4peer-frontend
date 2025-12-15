@@ -1,2 +1,1 @@
-export const API_URL = "https://peer4peer-backend.onrender.com";
-
+export const API_URL = "https://peer4peer-api.onrender.com";
